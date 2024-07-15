@@ -1,0 +1,14 @@
+diff --git a/MODULE.bazel b/MODULE.bazel
+index 2edb7b7..494f062 100644
+--- a/MODULE.bazel
++++ b/MODULE.bazel
+@@ -13,7 +13,8 @@ bazel_dep(name = "lz4", version = "1.9.4")
+ bazel_dep(name = "platforms", version = "0.0.10")
+ bazel_dep(name = "rules_cc", version = "0.0.9")
+ bazel_dep(name = "rules_foreign_cc", version = "0.11.1")
+-bazel_dep(name = "rules_python", version = "0.34.0")
++
++bazel_dep(name = "rules_python", version = "0.34.0", dev_dependency = True)
+
+ non_module_ros_repositories = use_extension("//ros:extensions.bzl", "non_module_dependencies")
+ use_repo(

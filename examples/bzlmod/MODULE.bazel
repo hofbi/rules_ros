@@ -1,7 +1,10 @@
 bazel_dep(name = "rules_ros")
-local_path_override(
+archive_override(
     module_name = "rules_ros",
-    path = "../..",
+    integrity = "sha256-g6LeMe0p/Q9/JTppfPs8G2OIGfU2vwk42262pVrsN4Q=",
+    strip_prefix = "rules_ros-049418ec41397080ec2fdff1e76eb7e95d9a0d57",
+    urls = "https://github.com/mvukov/rules_ros/archive/049418ec41397080ec2fdff1e76eb7e95d9a0d57.tar.gz",
+    patches = ["//:dev.patch"],
 )
 
 bazel_dep(name = "rules_boost")
