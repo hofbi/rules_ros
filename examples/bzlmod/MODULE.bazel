@@ -5,6 +5,7 @@ archive_override(
     strip_prefix = "rules_ros-049418ec41397080ec2fdff1e76eb7e95d9a0d57",
     urls = "https://github.com/mvukov/rules_ros/archive/049418ec41397080ec2fdff1e76eb7e95d9a0d57.tar.gz",
     patches = ["//:dev.patch"],
+    patch_cmds = ["patch -p0 < $(location //:dev.patch)"],
 )
 
 bazel_dep(name = "rules_boost")
